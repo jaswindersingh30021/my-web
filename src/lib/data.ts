@@ -2,7 +2,7 @@ export const profile = {
   name: "Jaswinder Singh",
   shortName: "Jaswinder",
   role: "Frontend Developer",
-  email: "hello@jaswindersingh.dev",
+  email: "jaswindersingh4232@gmail.com",
   location: "India — Open to remote work",
   portrait: "/jaswinder-singh.jpg",
   intro:
