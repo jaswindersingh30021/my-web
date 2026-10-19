@@ -111,7 +111,7 @@ export function About() {
             care about typography, motion, and code that teams can maintain.
           </p>
           <p className="about-line mt-6 max-w-2xl text-sm leading-relaxed text-muted md:text-base">
-            I&apos;ve shipped products like BeelsCRM, Yursyi, Mittal & Kansal
+            I&apos;ve shipped products like BeelsCRM, Yurayi, Mittal & Kansal
             Properties, and the Codigo Mantra website — using React, Next.js,
             Tailwind, GSAP, Payload CMS, shadcn/ui, Bootstrap, and Django where
             needed.

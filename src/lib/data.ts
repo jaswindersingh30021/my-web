@@ -45,8 +45,8 @@ export const projects = [
     offset: "md:mt-24",
   },
   {
-    slug: "yursyi",
-    title: "Yursyi",
+    slug: "yurayi",
+    title: "Yurayi",
     category: "Web App · Next.js · Frontend",
     tags: ["Next.js", "Web App", "UI"],
     year: "2025",
