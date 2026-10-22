@@ -52,10 +52,9 @@ export function AmbientBackground() {
   return (
     <div
       ref={rootRef}
-      className="pointer-events-none fixed inset-0 z-0 overflow-hidden"
+      className="pointer-events-none fixed inset-0 z-[2] overflow-hidden opacity-80"
       aria-hidden
     >
-      <div className="site-grid absolute inset-0 opacity-[0.35]" />
       <div className="ambient-orb-a absolute -top-16 -left-16 h-[220px] w-[220px] rounded-full bg-accent/10 blur-[70px] sm:-top-24 sm:-left-24 sm:h-[420px] sm:w-[420px] sm:blur-[100px]" />
       <div className="ambient-orb-b absolute top-[35%] -right-16 h-[180px] w-[180px] rounded-full bg-accent/8 blur-[60px] sm:-right-32 sm:h-[360px] sm:w-[360px] sm:blur-[90px]" />
       <div className="absolute bottom-0 left-[20%] h-[280px] w-[280px] rounded-full bg-foreground/5 blur-[80px]" />

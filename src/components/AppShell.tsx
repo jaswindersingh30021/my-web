@@ -8,6 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { Preloader } from "@/components/Preloader";
 import { CustomCursor } from "@/components/CustomCursor";
+import { ThreeBackground } from "@/components/ThreeBackground";
 import { AmbientBackground } from "@/components/AmbientBackground";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { TechMarquee } from "@/components/TechMarquee";
@@ -42,6 +43,7 @@ export function AppShell() {
       {showPreloader && (
         <Preloader onComplete={handlePreloaderComplete} />
       )}
+      <ThreeBackground />
       <AmbientBackground />
       <ScrollProgress />
       <CustomCursor />
@@ -56,7 +58,9 @@ export function AppShell() {
         <Process />
         <Contact />
       </main>
-      <Footer />
+      <div className="relative z-10">
+        <Footer />
+      </div>
     </SmoothScroll>
   );
 }

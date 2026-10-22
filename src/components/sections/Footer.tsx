@@ -18,7 +18,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="border-t border-border px-4 py-10 sm:px-6 md:px-10">
+    <footer className="relative z-10 border-t border-border bg-background/80 px-4 py-10 backdrop-blur-sm sm:px-6 md:px-10">
       <div className="mx-auto flex max-w-[1400px] flex-col gap-8 md:flex-row md:items-end md:justify-between">
         <div>
           <Link
