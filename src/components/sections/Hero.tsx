@@ -1,14 +1,13 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowDown } from "lucide-react";
 import { MagneticButton } from "@/components/MagneticButton";
 import { SkillChipCloud } from "@/components/SkillChipCloud";
+import { HeroPortrait3D } from "@/components/HeroPortrait3D";
 import { profile } from "@/lib/data";
-import { useTilt } from "@/hooks/useTilt";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -22,8 +21,6 @@ type HeroProps = {
 export function Hero({ ready }: HeroProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const reducedMotion = usePrefersReducedMotion();
-  const { ref: portraitRef, onMove, onLeave, style } = useTilt(6);
-
   useEffect(() => {
     if (!sectionRef.current || reducedMotion || !ready) return;
 
@@ -146,37 +143,15 @@ export function Hero({ ready }: HeroProps) {
           </div>
         </div>
 
-        <div className="hero-fade hero-portrait relative lg:col-span-5 lg:justify-self-end">
-          <div
-            ref={portraitRef}
-            style={style}
-            onMouseMove={onMove}
-            onMouseLeave={onLeave}
-            className="gradient-frame relative mx-auto aspect-[3/4] w-full max-w-md lg:max-w-none"
-          >
-            <div className="corner-mark tl" />
-            <div className="corner-mark tr" />
-            <div className="corner-mark bl" />
-            <div className="corner-mark br" />
-            <div className="relative z-10 m-[3px] aspect-[3/4] overflow-hidden bg-background">
-              <Image
-                src={profile.portrait}
-                alt={`Portrait of ${profile.name}, frontend developer`}
-                fill
-                priority
-                sizes="(max-width: 1024px) 90vw, 40vw"
-                className="object-cover object-center transition-transform duration-700 hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-              <div className="absolute right-4 bottom-4 left-4 panel-glass p-3">
-                <p className="font-display text-[10px] uppercase tracking-[0.25em] text-accent">
-                  Based in India
-                </p>
-                <p className="mt-1 text-xs text-muted">
-                  React · Next.js · GSAP specialist
-                </p>
-              </div>
-            </div>
+        <div className="hero-fade relative lg:col-span-5 lg:justify-self-end">
+          <HeroPortrait3D className="relative z-10" />
+          <div className="pointer-events-none absolute right-4 bottom-4 left-4 z-20 panel-glass p-3 sm:right-7 sm:bottom-7 sm:left-7">
+            <p className="font-display text-[10px] uppercase tracking-[0.25em] text-accent">
+              Based in India
+            </p>
+            <p className="mt-1 text-xs text-muted">
+              React · Next.js · GSAP · Three.js
+            </p>
           </div>
         </div>
       </div>

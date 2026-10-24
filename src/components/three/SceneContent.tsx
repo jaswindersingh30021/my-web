@@ -2,7 +2,10 @@
 
 import { useEffect, useMemo, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
+import { Suspense } from "react";
 import { Float, Sparkles } from "@react-three/drei";
+import { PortraitModel } from "@/components/three/PortraitModel";
+import { profile } from "@/lib/data";
 import * as THREE from "three";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -170,6 +173,14 @@ export function SceneContent({ mobile, reducedMotion }: SceneContentProps) {
       />
 
       <CoreShapes mobile={mobile} />
+
+      {!mobile && (
+        <Suspense fallback={null}>
+          <group position={[3.4, -0.2, -2.2]} scale={0.42} rotation={[0, -0.35, 0]}>
+            <PortraitModel mobile={false} imageUrl={profile.portrait3d} />
+          </group>
+        </Suspense>
+      )}
     </>
   );
 }

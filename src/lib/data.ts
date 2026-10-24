@@ -4,7 +4,8 @@ export const profile = {
   role: "Frontend Developer",
   email: "jaswindersingh4232@gmail.com",
   location: "India — Open to remote work",
-  portrait: "/jaswinder-singh.jpg",
+  portrait: "/jaswinder-outdoor.jpg",
+  portrait3d: "/jaswinder-outdoor.jpg",
   intro:
     "I build fast, animated, and polished web interfaces — from CRM dashboards to property sites — with React, Next.js, GSAP, and modern CSS.",
   availability: "Available for freelance & full-time",
