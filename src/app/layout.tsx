@@ -6,13 +6,16 @@ import "./globals.css";
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: "variable",
+  axes: ["opsz"],
+  display: "swap",
 });
 
 const syne = Syne({
   variable: "--font-syne",
   subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
+  weight: "variable",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
