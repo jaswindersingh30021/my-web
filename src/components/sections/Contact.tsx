@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { portfolioEmail, profile, socialLinks, techMarquee } from "@/lib/data";
+import { ContactForm } from "@/components/ContactForm";
 import { MagneticButton } from "@/components/MagneticButton";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
@@ -73,6 +74,8 @@ export function Contact() {
                 Send an email
               </MagneticButton>
             </div>
+
+            <ContactForm />
           </div>
 
           <div className="contact-reveal grid gap-4 sm:grid-cols-2 lg:col-span-5">
